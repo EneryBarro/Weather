@@ -1,0 +1,38 @@
+weather:
+  api:
+    url: https://api.stormglass.io/v2/weather/point
+    key: 4323bcfc-052d-11ed-b697-0242ac130002-4323bd56-052d-11ed-b697-0242ac130002
+
+location:
+  api:
+    url: http://api.ipstack.com/
+    key: f12a85f327acdb4447e2ff6d28bb405c
+  api-position-stack:
+    url: http://api.positionstack.com/v1/
+    key: 19cdecae39e372ff9a95fd974f64d6f6
+
+spring:
+  data:
+    jpa:
+      repositories:
+        enabled: true
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongodb
+      authentication-database: admin
+      username: mongo
+      password: mongo
+      auto-index-creation: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+    baseline-on-migrate: true
+    out-of-order: true
